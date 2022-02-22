@@ -1,0 +1,49 @@
+// $perfix to add perfix class and used like in #{$perfix}.layout-#{$theme}
+@mixin themed($perfix: "") {
+  // TODO : needs improvement - remove duplicated code
+  @each $theme, $map in $themes {
+    @if $perfix == "" {
+      #{$perfix}.layout-#{$theme} & {
+        $theme-map: () !global;
+        @each $key, $submap in $map {
+          $value: map-get(map-get($themes, $theme), $key);
+          $theme-map: map-merge(
+            $theme-map,
+            (
+              $key: $value,
+            )
+          ) !global;
+        }
+        @content;
+        $theme-map: null !global;
+      }
+    } @else {
+      #{$perfix}.layout-#{$theme} {
+        $theme-map: () !global;
+        @each $key, $submap in $map {
+          $value: map-get(map-get($themes, $theme), $key);
+          $theme-map: map-merge(
+            $theme-map,
+            (
+              $key: $value,
+            )
+          ) !global;
+        }
+        @content;
+        $theme-map: null !global;
+      }
+    }
+  }
+}
+
+@function theme($key) {
+  @return map-get($theme-map, $key);
+}
+
+@mixin transition($duration: "slow") {
+  @if $duration == "slow" {
+    transition: all 0.3s ease-in-out;
+  } @else {
+    transition: all 0.1s ease-in-out;
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../../theme/index.scss";
+
+.ham .line {
+  width: 20.4px;
+  height: 2px;
+
+  margin-top: 4px;
+  border-radius: 6px;
+  @include themed() {
+    background: theme($color);
+    color: theme($background-color);
+  }
+  @include transition("slow");
+}

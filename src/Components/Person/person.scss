@@ -1,0 +1,29 @@
+@import "../../theme/index.scss";
+.person {
+  text-align: center;
+  padding: 5px;
+}
+.person .image {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.person .image img {
+  width: 100%;
+}
+.person .title {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+  margin-top: 10px;
+}
+
+.person .num {
+  float: left;
+  opacity: 0.4;
+}
+.person .body {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  margin-top: 10px;
+}

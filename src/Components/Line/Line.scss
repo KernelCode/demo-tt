@@ -1,0 +1,9 @@
+@import "../../theme/index.scss";
+
+.long-line {
+  opacity: 0.2;
+  margin-top: 30px;
+  @include themed() {
+    border-color: theme($color);
+  }
+}

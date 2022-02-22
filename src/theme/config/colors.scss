@@ -1,0 +1,39 @@
+$dark: "dark";
+$light: "light";
+
+$background-color: #232323;
+$color: #000;
+$color-inverted: #fff;
+$section-background-color: #f8f1e8;
+
+$box-border: 2px solid #f8f1e8;
+$box-background: #f8f1e7;
+$color-button: none;
+
+$mix-blend-mode: color-dodge;
+$filter: invert(1);
+
+$themes: (
+  $light: (
+    $background-color: #ffffff,
+    $color: #000,
+    $color-inverted: #fff,
+    $section-background-color: #f8f1e8,
+    $mix-blend-mode: darken,
+    $filter: invert(0),
+    $box-border: none,
+    $box-background: #f8f1e7,
+    $color-button: none,
+  ),
+  $dark: (
+    $background-color: #232323,
+    $color: #f8f1e8,
+    $color-inverted: #000,
+    $section-background-color: #f8f1e83b,
+    $mix-blend-mode: color-dodge,
+    $filter: invert(1),
+    $box-border: 2px solid #f8f1e877,
+    $box-background: none,
+    $color-button: #f8f1e7,
+  ),
+);

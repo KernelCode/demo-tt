@@ -1,0 +1,29 @@
+@import "../../../theme/index.scss";
+
+.hilal {
+  position: relative;
+  cursor: pointer;
+}
+.hilal .hilal-cir {
+  width: 19.61px;
+  height: 19.61px;
+  border-radius: 50%;
+  @include themed() {
+    background: theme($color);
+    color: theme($background-color);
+  }
+  @include transition("slow");
+}
+
+.hilal .hilal-cover {
+  width: 19.61px;
+  height: 19.61px;
+  border-radius: 50%;
+  position: absolute;
+  @include transition("slow");
+  top: -7px;
+  left: -6px;
+  @include themed() {
+    background: theme($background-color);
+  }
+}

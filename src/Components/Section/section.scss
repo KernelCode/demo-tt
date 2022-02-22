@@ -1,0 +1,9 @@
+@import "../../theme/index.scss";
+
+.bg {
+  padding: 20px;
+
+  @include themed() {
+    background: theme($section-background-color);
+  }
+}

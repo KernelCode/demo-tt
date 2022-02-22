@@ -1,0 +1,27 @@
+@import "../../theme/index.scss";
+
+.box {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  font-weight: 700;
+  width: fit-content;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.box.fill {
+  @include themed() {
+    color: theme($background-color);
+    background: theme($color);
+  }
+}
+.box.outline {
+  border: 2px solid;
+  @include themed() {
+    border-color: theme($color);
+    color: theme($color);
+  }
+}

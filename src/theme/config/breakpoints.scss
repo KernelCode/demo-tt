@@ -1,0 +1,9 @@
+// media aliases and breakpoints
+$tablet: 980px;
+
+// media devices
+@mixin tablet {
+  @media screen and (max-width: #{$tablet}) {
+    @content;
+  }
+}

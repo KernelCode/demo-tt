@@ -1,0 +1,22 @@
+@import "../../theme/index.scss";
+
+.header {
+  text-align: center;
+  height: 100px;
+}
+.header .logo {
+  position: absolute;
+  margin-left: -95px;
+}
+.header-mnu {
+  display: flex;
+  gap: 25px;
+}
+.header-mnu .mnu {
+  display: flex;
+  gap: 10px;
+}
+.header-mnu .mnu .mnu-title {
+  font-weight: 700;
+  margin-top: 3px;
+}

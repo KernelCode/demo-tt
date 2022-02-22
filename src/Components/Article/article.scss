@@ -1,0 +1,104 @@
+@import "../../theme/index.scss";
+
+.article {
+  @include transition("fast");
+}
+
+.article.centred {
+  text-align: center;
+}
+.article.centred .body {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.article h1 {
+  font-size: 28px;
+  font-weight: 500;
+  font-family: "Playfair Display", serif;
+}
+.article p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+}
+.article span {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+.article .rate {
+  z-index: 1;
+  position: absolute;
+  bottom: 3px;
+}
+.article .image-cont {
+  height: fit-content;
+}
+.article img,
+.article video {
+  width: 100%;
+}
+.article.blendImage img {
+  @include themed() {
+    mix-blend-mode: theme($mix-blend-mode);
+    filter: theme($filter);
+  }
+}
+
+.article .full {
+  max-height: 600px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.article .full .box {
+  top: 20px;
+  position: absolute;
+}
+.article .full .body-text {
+  bottom: 44px;
+  position: absolute;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.article .full .box {
+  color: $color-inverted;
+  background: $color;
+}
+.article .full h1 {
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 24px;
+}
+.article .full p {
+  margin-bottom: 24px;
+}
+.article .full p,
+.article .full span,
+.article .full h1 {
+  color: $color-inverted;
+}
+
+.article .full .over-gradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.13489145658263302) 100%
+  );
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 0;
+}

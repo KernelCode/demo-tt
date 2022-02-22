@@ -1,0 +1,21 @@
+.footer {
+  justify-content: space-between;
+  margin-top: 50px;
+  font-size: 13px;
+}
+.footer .list .head {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+.footer .list .item {
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  margin-top: 15px;
+  font-size: 12px;
+}
+.footer .list .item.bold {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

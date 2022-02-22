@@ -1,0 +1,22 @@
+@import "../theme/index.scss";
+
+@include themed(".layout") {
+  background: theme($background-color);
+  color: theme($color);
+}
+.layout {
+  padding-top: 26px;
+  padding-left: 52px;
+  padding-right: 52px;
+  @include transition("slow");
+
+  @include tablet {
+    padding-top: 26px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.layout-contianer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
