@@ -1,7 +1,6 @@
 import React from "react";
 
 import Section from "../Components/Section/Section";
-import Grid from "../Components/Grid/Grid";
 
 import Article from "../Components/Article/Article";
 
