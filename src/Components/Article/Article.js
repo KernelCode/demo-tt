@@ -16,7 +16,7 @@ export default function Article(props) {
     gridStyle = {},
   } = props.config || {
     imagePostion: "bottom",
-    centred: "centred",
+    centred: "",
   };
   return (
     <div className={`article ${centred} ${blendImage}`} style={props.style}>
